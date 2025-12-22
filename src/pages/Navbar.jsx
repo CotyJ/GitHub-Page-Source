@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 
 export default function Navbar() {
-
   const [theme, setTheme] = useState('light');
 
   useEffect(() => {
@@ -10,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="navbar navbar-expand-lg bg-body-tertiary"
+      className="navbar navbar-expand-sm bg-body-tertiary"
       style={{ fontFamily: 'Source Code Pro' }}
       data-bs-theme="dark"
     >
@@ -54,66 +53,53 @@ export default function Navbar() {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Action
-                  </a>
+                  <a className="dropdown-item" href="#">Modding</a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
+                  <a className="dropdown-item" href="#">???</a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
+                  <a className="dropdown-item" href="#">???</a>
                 </li>
               </ul>
             </li>
           </ul>
           <div className="d-flex">
+            <div className="nav-icon">
+              <a href="https://www.linkedin.com/in/cotyj" target="_blank">
+                <span
+                  className="fa-brands fa-3x fa-linkedin m-1 p-1"
+                  aria-hidden="true"
+                  target="_blank"
+                >
+                  <span className="sr-only">LinkedIn</span>
+                </span>
+              </a>
+            </div>
 
-<div className="nav-icon">
-
-            <a href="https://www.linkedin.com/in/cotyj" target="_blank">
-              <span
-                className="fa-brands fa-3x fa-linkedin m-1 p-1"
+            <div className="nav-icon">
+              <a
+                href="https://github.com/CotyJ"
                 aria-hidden="true"
                 target="_blank"
-                >
-                <span className="sr-only">LinkedIn</span>
-              </span>
-            </a>
-                </div>
-
-<div className="nav-icon">
-
-
-            <a
-              href="https://github.com/CotyJ"
-              aria-hidden="true"
-              target="_blank"
               >
-              <span className="fa-brands fa-3x fa-github-square m-1 p-1">
-                <span className="sr-only">Github</span>
-              </span>
-            </a>
-              </div>
+                <span className="fa-brands fa-3x fa-github-square m-1 p-1">
+                  <span className="sr-only">Github</span>
+                </span>
+              </a>
+            </div>
 
-
-<div className="nav-icon">
-
-
-            <button
-              id='theme-button'
-              className="btn btn-light border-3 m-2"
-              onClick={() =>
-                setTheme((t) => (t === 'light' ? 'dark' : 'light'))
-              }
+            <div className="nav-icon">
+              <button
+                id="theme-button"
+                className="btn btn-light border-3 m-2"
+                onClick={() =>
+                  setTheme((t) => (t === 'light' ? 'dark' : 'light'))
+                }
               >
-              <span className="fa-solid fa-lightbulb"></span>
-            </button>
-              </div>
+                <span className="fa-solid fa-lightbulb"></span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

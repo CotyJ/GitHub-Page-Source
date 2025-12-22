@@ -7,7 +7,7 @@ function Home() {
         If you're looking for some things I've worked on, check out Fun Stuff!
       </p>
       <p>
-        I like dark mode, you can click on the lightbulb on the right to turn the lights back on
+        I like dark mode, but you can click on the lightbulb on the right to turn the lights on or off
       </p>
     </div>
   );
