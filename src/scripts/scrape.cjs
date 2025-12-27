@@ -71,7 +71,7 @@ const scraper = async (products) => {
             history: [
               ...prevHistory,
               {
-                date: today,
+                date: latest,
                 price: price,
               }
             ]
