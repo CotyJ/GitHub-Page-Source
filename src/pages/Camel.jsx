@@ -7,9 +7,6 @@ export default function Camel() {
     fetch('../../public/data/data.json')
       .then((res) => res.json())
       .then((json) => {
-        // console.log(json);
-        // console.log(Object.entries(json)[0]);
-
         setData(json);
       });
   }, []);
