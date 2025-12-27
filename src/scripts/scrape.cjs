@@ -4,7 +4,7 @@ const path = require('path');
 
 // Bring in my data
 const productPath = path.join(__dirname, '../config/products.js');
-const dataPath = path.join(__dirname, '../data/data.json');
+const dataPath = path.join(__dirname, '../../public/data/data.json');
 const PRODUCTS = require(productPath); // READ FROM PRODUCTS
 const DATA = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 
