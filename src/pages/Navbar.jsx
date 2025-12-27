@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
   const [theme, setTheme] = useState('light');
@@ -36,11 +37,24 @@ export default function Navbar() {
                 Home
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#/about">
-                About
+
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Challenges
               </a>
+              <ul className="dropdown-menu">
+                <li><NavLink id="phonesFlags" className="dropdown-item" to="/challenges/phones-flags">Phones and Flags</NavLink></li>
+                <li><NavLink id="studentsApi" className="dropdown-item" to="/challenges/students">Students API</NavLink></li>
+                {/* <li><a className="dropdown-item" href="#">???</a></li> */}
+              </ul>
             </li>
+
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -52,16 +66,16 @@ export default function Navbar() {
                 Fun Stuff
               </a>
               <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">Modding</a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">???</a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">???</a>
-                </li>
+                <li><NavLink id="camel" className="dropdown-item" to="/funstuff/camel">Camel</NavLink></li>
+                <li><a className="dropdown-item" href="#">Modding</a></li>
+                {/* <li><a className="dropdown-item" href="#">???</a></li> */}
+                {/* <li><a className="dropdown-item" href="#">???</a></li> */}
               </ul>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#/about">
+                About
+              </a>
             </li>
           </ul>
           <div className="d-flex">
