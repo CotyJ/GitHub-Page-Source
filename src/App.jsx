@@ -11,7 +11,7 @@ function App() {
   return (
     <HashRouter>
       <Navbar />
-      <div className='page-wrapper'>
+    <div id='page-wrapper' >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

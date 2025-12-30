@@ -5,6 +5,7 @@
 }
 
 [data-theme="dark"] {
+
   --bg: rgb(69, 69, 69) ;
   --text: #eeeeee;
 }
@@ -19,7 +20,10 @@ body {
   color: var(--btn-text) !important;
 }
 
-.page-wrapper {
+/* Main page wrapper */
+#page-wrapper {
+  font-family: 'Rubik';
+
   margin: 1rem;
 }
 
@@ -42,4 +46,24 @@ body {
 
 .nav-icon a {
   color: white;
+}
+
+.camel-hump {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  max-width: 48rem;
+}
+
+.camel-hump-tltle {
+  font-weight: bold;
+  font-family: 'Source Code Pro';
+}
+
+li {
+  list-style-type: none;
+}
+
+.item-image {
+  max-width: 360px;
+  height: auto;
 }
