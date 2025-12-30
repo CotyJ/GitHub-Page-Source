@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-
+import CamelHump from './CamelHump';
 export default function Camel() {
   const [data, setData] = useState(null);
 
@@ -14,23 +14,13 @@ export default function Camel() {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <div>
-      <h4>Here are some products I'm watching out for!</h4>
+    <div className='text-wrap'>
+      <p>Here I keep track of the price trends for a few items.</p>
+      <p className='text-wrap'>Some I just want to buy at some point, others are just to see stable items over a long time.</p>
       <div className="container-fluid"></div>
-
       {Object.entries(data).length > 1 &&
         Object.entries(data).map((item, i) => (
-          <div key={i} className="row">
-            <div className="col">{
-              item[0][0].toUpperCase().concat(item[0].slice(1))
-            }</div>
-            <ul>
-              <li>{item[1].title}</li>
-              <img src={item[1].url}></img>
-
-              <li>{item[1].history[0].price}</li>
-            </ul>
-          </div>
+          <CamelHump item={item} key={i} />
         ))}
     </div>
   );

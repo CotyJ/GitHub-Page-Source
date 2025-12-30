@@ -48,6 +48,12 @@ const scraper = async (products) => {
         const [title, url, price] = await getItemInfo(entry);
         const newName = entry[0];
         const today = new Date().toISOString();
+        const now = new Date().toUTCString();
+
+        // LOG:
+        console.log("Today: ", today);
+        console.log("Now: ", now);
+
 
         const latest = today.slice(0, 10);
         const newest = DATA[newName]?.history[0]?.date?.slice(0, 10);
@@ -72,6 +78,7 @@ const scraper = async (products) => {
       }
     }
   }
+
   fs.writeFileSync(
     dataPath,
     JSON.stringify({ ...DATA, ...newDATA }, null, 2),
