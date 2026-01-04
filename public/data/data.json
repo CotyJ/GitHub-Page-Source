@@ -1,14 +1,4 @@
 {
-  "toothpaste": {
-    "title": "Crest + Scope Whitening Toothpaste - Pack of 3, 5.4 Oz Tubes - Anticavity Fluoride Toothpaste, Fresh Breath, Kills Germs - Tartar Protection, Enamel Protection - Minty Fresh Flavor",
-    "url": "https://m.media-amazon.com/images/I/610n+-McuRL._SY355_.jpg",
-    "history": [
-      {
-        "date": "2025-12-27",
-        "price": "8.99"
-      }
-    ]
-  },
   "monitor": {
     "title": "SAMSUNG 32\" UJ59 Series 4K UHD (3840x2160) Computer Monitor,VA Panel, HDMI, Display Port, Eye Saver/Flicker Free Mode, FreeSync, LU32J590UQNXZA, Black",
     "url": "https://m.media-amazon.com/images/I/81tizzS173L._AC_SY355_.jpg",
@@ -16,6 +6,51 @@
       {
         "date": "2025-12-27",
         "price": "199.99"
+      },
+      {
+        "date": "2026-01-02",
+        "price": "199.99"
+      },
+      {
+        "date": "2026-01-04",
+        "price": "199.99"
+      },
+      {
+        "date": "2026-01-04",
+        "price": "199.99"
+      }
+    ]
+  },
+  "kindle": {
+    "title": "Amazon Kindle Paperwhite 16GB (newest model) – 20% faster, with new 7\" glare-free display and weeks of battery life – Black",
+    "url": "https://m.media-amazon.com/images/I/71YwNBmu+aL._AC_SY450_.jpg",
+    "history": [
+      {
+        "date": "2026-01-04",
+        "price": "159.99"
+      }
+    ]
+  },
+
+    "toothpaste": {
+    "title": "Crest + Scope Whitening Toothpaste - Pack of 3, 5.4 Oz Tubes - Anticavity Fluoride Toothpaste, Fresh Breath, Kills Germs - Tartar Protection, Enamel Protection - Minty Fresh Flavor",
+    "url": "https://m.media-amazon.com/images/I/610n+-McuRL._SY355_.jpg",
+    "history": [
+      {
+        "date": "2025-12-27",
+        "price": "8.99"
+      },
+      {
+        "date": "2026-01-02",
+        "price": "8.99"
+      },
+      {
+        "date": "2026-01-04",
+        "price": "9.00"
+      },
+      {
+        "date": "2026-01-04",
+        "price": "9.00"
       }
     ]
   }

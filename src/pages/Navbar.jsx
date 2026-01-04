@@ -1,12 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-export default function Navbar() {
-  const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
+const Navbar = ({theme, setTheme}) => {
 
   return (
     <nav
@@ -31,7 +26,7 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav me-auto mb-lg-0">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
                 Home
@@ -66,9 +61,9 @@ export default function Navbar() {
                 Fun Stuff
               </a>
               <ul className="dropdown-menu">
-                <li><NavLink id="camel" className="dropdown-item" to="/funstuff/camel">Camel</NavLink></li>
-                <li><a className="dropdown-item" href="#">Modding</a></li>
-                <li><a className="dropdown-item" href="#">???</a></li>
+                <li><NavLink id="camel"   className="dropdown-item" to="/funstuff/camel">Camel</NavLink></li>
+                <li><NavLink id="modding" className="dropdown-item" to="/funstuff/modding">Modding</NavLink></li>
+                <li><NavLink id="modding" className="dropdown-item" to="/funstuff/mystery-page">???</NavLink></li>
               </ul>
             </li>
             <li className="nav-item">
@@ -78,10 +73,23 @@ export default function Navbar() {
             </li>
           </ul>
           <div className="d-flex">
+
+            <div className="nav-icon">
+              <a href="src/assets/Coty Janeway Resume.pdf" target="_blank">
+                <span
+                  className="fa-solid fa-user fa-2x"
+                  aria-hidden="true"
+                  target="_blank"
+                >
+                  <span className="sr-only">LinkedIn</span>
+                </span>
+              </a>
+            </div>
+
             <div className="nav-icon">
               <a href="https://www.linkedin.com/in/cotyj" target="_blank">
                 <span
-                  className="fa-brands fa-3x fa-linkedin m-1 p-1"
+                  className="fa-brands fa-3x fa-linkedin"
                   aria-hidden="true"
                   target="_blank"
                 >
@@ -119,3 +127,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+export default Navbar;

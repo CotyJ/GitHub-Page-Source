@@ -1,17 +1,12 @@
 
 :root {
-  --bg: #ffffff;
+  --bg: linear-gradient(#dddddd, #bbbbbb);
   --text: #111111;
 }
 
 [data-theme="dark"] {
-  --bg: rgb(69, 69, 69) ;
+  --bg: linear-gradient(#444444, #6d6d6d);
   --text: #eeeeee;
-}
-
-body {
-  background-color: var(--bg);
-  color: var(--text);
 }
 
 [data-theme="dark"] #theme-button {
@@ -19,27 +14,100 @@ body {
   color: var(--btn-text) !important;
 }
 
-.page-wrapper {
+[data-theme="dark"] .navbar {
+  background-color: #131313 !important;
+}
+
+[data-theme="dark"] .chart {
+/* Correct selector, but doesn't allow a lot of input here */
+font-size: medium;
+}
+
+[data-theme="dark"] XAxis {
+color: red;
+font-size: large;
+border: 2px solid green;
+}
+
+[data-theme="dark"] YAxis {
+  color: red;
+  font-size: large;
+  border: 2px solid green;
+}
+
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  margin: 0;
+  color: var(--text);
+}
+
+/* Main page wrapper */
+#page-wrapper {
+  font-family: 'Rubik';
   margin: 1rem;
 }
 
 .nav-icon {
   width: 40px;
   height: 40px;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   padding: 0;
   margin: 0 0.25rem;
-
   background: transparent;
   border: none;
-
   color: white !important;
 }
 
 .nav-icon a {
+  color: white;
+}
+
+.camel-hump {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  max-width: 48rem;
+}
+
+.camel-hump-tltle {
+  font-weight: bold;
+  font-family: 'Source Code Pro';
+}
+
+li {
+  list-style-type: none;
+}
+
+.item-image {
+  max-width: 360px;
+  height: auto;
+}
+
+.data-button {
+  color: var(--text);
+  border: 1px solid var(--text);
+  background-color: #aaa;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+  border-radius: 3px;
+}
+
+.data-button:hover {
+  background-color: #aaa;
+}
+
+p a {
+  color: black;
+}
+
+[data-theme="dark"] p a {
   color: white;
 }
