@@ -18,9 +18,9 @@ const getItemInfo = async (entry) => {
   try {
     await page.goto(entryUrl, { waitUntil: 'networkidle2' });
     await page.waitForSelector('#productTitle');
-    const title = await page.$eval('#productTitle', (el) =>el.textContent.trim());
-    const priceDollar = await page.$eval('.a-price-whole', (el) =>el.textContent.trim());
-    const priceCents = await page.$eval('.a-price-fraction', (el) =>el.textContent.trim());
+    const title = await page.$eval('#productTitle', (el) => el.textContent.trim());
+    const priceDollar = await page.$eval('.a-price-whole', (el) => el.textContent.trim());
+    const priceCents = await page.$eval('.a-price-fraction', (el) => el.textContent.trim());
     const price = priceDollar.concat(priceCents);
     const imageURL = await page.$eval('#landingImage', (el) => el.src);
 
@@ -28,22 +28,20 @@ const getItemInfo = async (entry) => {
 
   } catch (err) {
     console.log(err);
-    throw new err;
+    throw new err();
 
   } finally {
     await browser.close();
   }
 };
 
-// Loops over each product, updates object, then updates data.JSON
 const scraper = async (products) => {
   const newDATA = {};
 
-  // Loop over data set
   for (const item of Object.entries(products)) {
-    // first item should be default
+
     if (item[0] === 'default') {
-      // first index is the entry
+
       for (const entry of Object.entries(item[1])) {
         const [title, url, price] = await getItemInfo(entry);
         const newName = entry[0];
@@ -65,18 +63,18 @@ const scraper = async (products) => {
               },
             ],
           };
+
+          fs.writeFileSync(
+            dataPath,
+            JSON.stringify({ ...DATA, ...newDATA }, null, 2),
+            'utf-8'
+          );
         } else {
           console.log('Skip because I already ran today!');
         }
       }
     }
   }
-
-  fs.writeFileSync(
-    dataPath,
-    JSON.stringify({ ...DATA, ...newDATA }, null, 2),
-    'utf-8'
-  );
 };
 
 scraper(PRODUCTS);
