@@ -11,7 +11,7 @@ const Chart = ({data, theme ,setTheme}) => {
 
 
   useEffect(() => {
-    console.log(theme);
+    //
   },[theme])
 
   return (
