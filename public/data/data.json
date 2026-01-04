@@ -14,10 +14,6 @@
       {
         "date": "2026-01-04",
         "price": "199.99"
-      },
-      {
-        "date": "2026-01-04",
-        "price": "199.99"
       }
     ]
   },
@@ -31,8 +27,7 @@
       }
     ]
   },
-
-    "toothpaste": {
+  "toothpaste": {
     "title": "Crest + Scope Whitening Toothpaste - Pack of 3, 5.4 Oz Tubes - Anticavity Fluoride Toothpaste, Fresh Breath, Kills Germs - Tartar Protection, Enamel Protection - Minty Fresh Flavor",
     "url": "https://m.media-amazon.com/images/I/610n+-McuRL._SY355_.jpg",
     "history": [
@@ -46,11 +41,7 @@
       },
       {
         "date": "2026-01-04",
-        "price": "9.00"
-      },
-      {
-        "date": "2026-01-04",
-        "price": "9.00"
+        "price": "8.99"
       }
     ]
   }
