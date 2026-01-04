@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import CamelHump from './CamelHump';
-export default function Camel() {
+
+export default function Camel({theme, setTheme}) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function Camel() {
       <div className="container-fluid"></div>
       {Object.entries(data).length > 1 &&
         Object.entries(data).map((item, i) => (
-          <CamelHump item={item} key={i} />
+          <CamelHump item={item} key={i} theme={theme} setTheme={setTheme}/>
         ))}
     </div>
   );
