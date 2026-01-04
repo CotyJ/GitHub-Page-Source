@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import {  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Line} from 'recharts';
 
 
-export default function Chart({data, theme ,setTheme}) {
+const Chart = ({data, theme ,setTheme}) => {
 
   const style = { width: '100%', maxWidth: '700px', maxHeight: '60vh', aspectRatio: 1.618 , margin: '0.1rem', padding: '0.5rem', fontSize: 'x-small'};
 
@@ -43,3 +43,5 @@ export default function Chart({data, theme ,setTheme}) {
     </div>
   );
 }
+
+export default Chart;

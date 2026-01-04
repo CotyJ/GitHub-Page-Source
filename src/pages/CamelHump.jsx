@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Chart from "./Chart";
 
-export default function CamelHump({ item, theme, setTheme }) {
+const CamelHump = ({ item, theme, setTheme }) => {
 
   const [viewData, setViewData] = useState(false);
 
@@ -36,3 +36,5 @@ export default function CamelHump({ item, theme, setTheme }) {
     </div>
   );
 }
+
+export default CamelHump;

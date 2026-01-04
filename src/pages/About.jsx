@@ -1,4 +1,4 @@
-function About() {
+const About = () => {
   return (
     <div>
       <p>Wow! You actually want to know about me?! I'm touched!</p>

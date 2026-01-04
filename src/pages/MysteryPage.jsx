@@ -1,5 +1,7 @@
-export default function MysteryPage() {
+const MysteryPage = () => {
   return (
     <div>???</div>
   )
 }
+
+export default MysteryPage;

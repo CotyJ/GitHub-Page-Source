@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import CamelHump from './CamelHump';
 
-export default function Camel({theme, setTheme}) {
+const Camel = ({theme, setTheme}) => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -26,3 +26,5 @@ export default function Camel({theme, setTheme}) {
     </div>
   );
 }
+
+export default Camel;

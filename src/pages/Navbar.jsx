@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-export default function Navbar({theme, setTheme}) {
+const Navbar = ({theme, setTheme}) => {
 
   return (
     <nav
@@ -127,3 +127,5 @@ export default function Navbar({theme, setTheme}) {
     </nav>
   );
 }
+
+export default Navbar;

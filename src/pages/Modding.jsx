@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Modding() {
+const Modding = () => {
   return (
     <div>
       <p>Uh, wait, this page isn't ready either!</p>
@@ -8,3 +8,5 @@ export default function Modding() {
     </div>
   )
 }
+
+export default Modding;
