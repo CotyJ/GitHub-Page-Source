@@ -1,30 +1,31 @@
 import { useEffect, useState } from 'react';
 import CamelHump from './CamelHump';
 
-const Camel = ({theme, setTheme}) => {
+const Camel = ({ theme, setTheme }) => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch('../../public/data/data.json')
+    fetch(`${import.meta.env.BASE_URL}data/data.json`)
       .then((res) => res.json())
-      .then((json) => {
-        setData(json);
-      });
+      .then((json) => setData(json));
   }, []);
 
   if (!data) return <div>Loading...</div>;
 
   return (
-    <div className='text-wrap'>
+    <div className="text-wrap">
       <p>Here I keep track of the price trends for a few items.</p>
-      <p className='text-wrap'>Some I just want to buy at some point, others are just to see stable items over a long time.</p>
+      <p className="text-wrap">
+        Some I just want to buy at some point, others are just to see stable
+        items over a long time.
+      </p>
       <div className="container-fluid"></div>
       {Object.entries(data).length > 1 &&
         Object.entries(data).map((item, i) => (
-          <CamelHump item={item} key={i} theme={theme} setTheme={setTheme}/>
+          <CamelHump item={item} key={i} theme={theme} setTheme={setTheme} />
         ))}
     </div>
   );
-}
+};
 
 export default Camel;
