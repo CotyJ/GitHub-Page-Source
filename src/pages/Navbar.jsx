@@ -75,7 +75,7 @@ const Navbar = ({theme, setTheme}) => {
           <div className="d-flex">
 
             <div className="nav-icon">
-              <a href="src/assets/Coty Janeway Resume.pdf" target="_blank">
+              <a href="/assets/Coty Janeway Resume.pdf" target="_blank">
                 <span
                   className="fa-solid fa-user fa-2x"
                   aria-hidden="true"
