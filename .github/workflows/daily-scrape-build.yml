@@ -19,7 +19,7 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       - run: npm ci
-      - run: node src/scripts/scrape.js
+      - run: node src/scripts/scrape.cjs
       - run: npm run build
 
       - name: Deploy to GitHub Pages
