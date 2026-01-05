@@ -1,6 +1,6 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
-on: # [push]
+name: scrape-build
+run-name: "${{ github.actor }}'s daily build"
+on:
   schedule:
     - cron: '0 5 * * *'
   workflow_dispatch:
@@ -13,5 +13,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
       - run: npm install -g bats
       - run: bats -v
