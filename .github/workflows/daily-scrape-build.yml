@@ -1,4 +1,4 @@
-name: scrape-build
+name: Scrape and deploy
 run-name: "${{ github.actor }}'s daily build"
 on:
   schedule:
@@ -6,15 +6,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  check-bats-version:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
+
       - run: npm install -g bats
       - run: bats -v
       - run: node scripts/scrape.js
       - run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
