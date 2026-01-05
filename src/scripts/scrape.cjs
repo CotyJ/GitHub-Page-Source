@@ -14,13 +14,13 @@ const getItemInfo = async (entry) => {
 
   const browser = await puppeteer.launch({
     headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
   });
   const page = await browser.newPage();
 
   try {
-    await page.goto(entryUrl, { waitUntil: 'networkidle2' });
-    await page.waitForSelector('#productTitle');
+    await page.goto(entryUrl, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.waitForSelector('#productTitle',{timeout: 60000});
     const title = await page.$eval('#productTitle', (el) => el.textContent.trim());
     const priceDollar = await page.$eval('.a-price-whole', (el) => el.textContent.trim());
     const priceCents = await page.$eval('.a-price-fraction', (el) => el.textContent.trim());
