@@ -1,0 +1,1 @@
+import{j as t}from"./index-DupIHi6S.js";const r=()=>t.jsx("div",{children:t.jsxs("p",{children:["Oops! Just a link to the ",t.jsx("a",{href:"https://github.com/CotyJ/java_ts_students_orders",children:"GitHub"})," for now!"]})});export{r as default};

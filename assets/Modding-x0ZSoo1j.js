@@ -1,0 +1,1 @@
+import{j as e}from"./index-DupIHi6S.js";const s=()=>e.jsxs("div",{children:[e.jsx("p",{children:"Uh, wait, this page isn't ready either!"}),e.jsx("p",{children:"I'm working on some mods, but I haven't published them yet!"})]});export{s as default};
