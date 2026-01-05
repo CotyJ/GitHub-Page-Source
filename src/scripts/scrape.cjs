@@ -12,7 +12,7 @@ const DATA = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 const getItemInfo = async (entry) => {
   const entryUrl = entry[1];
 
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox']});
   const page = await browser.newPage();
 
   try {
