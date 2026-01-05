@@ -12,7 +12,10 @@ const DATA = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 const getItemInfo = async (entry) => {
   const entryUrl = entry[1];
 
-  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox']});
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
   const page = await browser.newPage();
 
   try {
@@ -25,11 +28,8 @@ const getItemInfo = async (entry) => {
     const imageURL = await page.$eval('#landingImage', (el) => el.src);
 
     return [title, imageURL, price];
-
   } catch (err) {
     console.log(err);
-    throw new err();
-
   } finally {
     await browser.close();
   }
@@ -37,43 +37,44 @@ const getItemInfo = async (entry) => {
 
 const scraper = async (products) => {
   const newDATA = {};
+  try {
+    for (const item of Object.entries(products)) {
+      if (item[0] === 'default') {
+        for (const entry of Object.entries(item[1])) {
+          const [title, url, price] = await getItemInfo(entry);
+          const newName = entry[0];
+          const today = new Date().toISOString();
+          const now = new Date().toUTCString();
+          const latest = today.slice(0, 10);
+          const newest = DATA[newName]?.history[0]?.date?.slice(0, 10);
+          const prevHistory = DATA[newName]?.history || [];
 
-  for (const item of Object.entries(products)) {
+          if (newest !== latest) {
+            newDATA[newName] = {
+              title,
+              url,
+              history: [
+                ...prevHistory,
+                {
+                  date: latest,
+                  price: price,
+                },
+              ],
+            };
 
-    if (item[0] === 'default') {
-
-      for (const entry of Object.entries(item[1])) {
-        const [title, url, price] = await getItemInfo(entry);
-        const newName = entry[0];
-        const today = new Date().toISOString();
-        const now = new Date().toUTCString();
-        const latest = today.slice(0, 10);
-        const newest = DATA[newName]?.history[0]?.date?.slice(0, 10);
-        const prevHistory = DATA[newName]?.history || [];
-
-        if (newest !== latest) {
-          newDATA[newName] = {
-            title,
-            url,
-            history: [
-              ...prevHistory,
-              {
-                date: latest,
-                price: price,
-              },
-            ],
-          };
-
-          fs.writeFileSync(
-            dataPath,
-            JSON.stringify({ ...DATA, ...newDATA }, null, 2),
-            'utf-8'
-          );
-        } else {
-          console.log('Skip because I already ran today!');
+            fs.writeFileSync(
+              dataPath,
+              JSON.stringify({ ...DATA, ...newDATA }, null, 2),
+              'utf-8'
+            );
+          } else {
+            console.log('Skip because I already ran today!');
+          }
         }
       }
     }
+  } catch (error) {
+    console.log(error);
   }
 };
 
