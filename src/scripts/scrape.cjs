@@ -20,9 +20,7 @@ const getItemInfo = async (entry) => {
 
   try {
     await page.goto(entryUrl, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.screenshot({path: 'debug1.png'})
     await page.waitForSelector('#productTitle',{timeout: 60000});
-    await page.screenshot({path: 'debug2.png'})
     const title = await page.$eval('#productTitle', (el) => el.textContent.trim());
     const priceDollar = await page.$eval('.a-price-whole', (el) => el.textContent.trim());
     const priceCents = await page.$eval('.a-price-fraction', (el) => el.textContent.trim());
