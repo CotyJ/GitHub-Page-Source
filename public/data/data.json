@@ -4,6 +4,10 @@
     "url": "https://m.media-amazon.com/images/I/81tizzS173L._AC_SY355_.jpg",
     "history": [
       {
+        "date": "2026-01-12",
+        "price": "279.00"
+      },
+      {
         "date": "2025-12-27",
         "price": "199.99"
       },
@@ -18,6 +22,18 @@
       {
         "date": "2026-01-05",
         "price": "284.00"
+      },
+      {
+        "date": "2026-01-05",
+        "price": "279.99"
+      },
+      {
+        "date": "2026-01-05",
+        "price": "279.99"
+      },
+      {
+        "date": "2026-01-06",
+        "price": "278.99"
       }
     ]
   },
@@ -26,11 +42,27 @@
     "url": "https://m.media-amazon.com/images/I/71YwNBmu+aL._AC_SY450_.jpg",
     "history": [
       {
+        "date": "2026-01-12",
+        "price": "159.99"
+      },
+      {
         "date": "2026-01-04",
         "price": "159.99"
       },
       {
         "date": "2026-01-05",
+        "price": "159.99"
+      },
+      {
+        "date": "2026-01-05",
+        "price": "159.99"
+      },
+      {
+        "date": "2026-01-05",
+        "price": "159.99"
+      },
+      {
+        "date": "2026-01-06",
         "price": "159.99"
       }
     ]
@@ -39,6 +71,10 @@
     "title": "Crest + Scope Whitening Toothpaste - Pack of 3, 5.4 Oz Tubes - Anticavity Fluoride Toothpaste, Fresh Breath, Kills Germs - Tartar Protection, Enamel Protection - Minty Fresh Flavor",
     "url": "https://m.media-amazon.com/images/I/610n+-McuRL._SY355_.jpg",
     "history": [
+      {
+        "date": "2026-01-12",
+        "price": "8.99"
+      },
       {
         "date": "2025-12-27",
         "price": "8.99"
@@ -54,6 +90,36 @@
       {
         "date": "2026-01-05",
         "price": "8.99"
+      },
+      {
+        "date": "2026-01-05",
+        "price": "8.99"
+      },
+      {
+        "date": "2026-01-05",
+        "price": "8.99"
+      },
+      {
+        "date": "2026-01-06",
+        "price": "8.99"
+      }
+    ]
+  },
+  "macbook": {
+    "title": "Apple 2025 MacBook Air 13-inch Laptop with M4 chip: Built for Apple Intelligence, 13.6-inch Liquid Retina Display, 16GB Unified Memory, 256GB SSD Storage, 12MP Center Stage Camera, Touch ID; Midnight",
+    "url": "https://m.media-amazon.com/images/I/71cWZUr9SVL._AC_SX342_.jpg",
+    "history": [
+      {
+        "date": "2026-01-12",
+        "price": "799.00"
+      },
+      {
+        "date": "2026-01-05",
+        "price": "799.00"
+      },
+      {
+        "date": "2026-01-06",
+        "price": "799.00"
       }
     ]
   }
