@@ -23,7 +23,7 @@ const CamelHump = ({ item, theme, setTheme }) => {
 
         {/* Price */}
         <li className="d-flex my-1 align-items-center">
-          <div>{`Price today: ${item[1].history[history.length - 1].price}`}</div>
+          <div>{`Price today: ${item[1].history[0].price}`}</div>
           <button className="mx-2 btn data-button" onClick={() => setViewData(!viewData)}>{viewData ? 'Image' : 'History'}</button>
         </li>
 

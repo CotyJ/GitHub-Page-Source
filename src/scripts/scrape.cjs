@@ -27,7 +27,6 @@ const getItemInfo = async (entry) => {
     const price = priceDollar.concat(priceCents);
     const imageURL = await page.$eval('#landingImage', (el) => el.src);
 
-
     return [title, imageURL, price];
   } catch (err) {
     console.log(err);
@@ -42,10 +41,14 @@ const scraper = async (products) => {
     for (const item of Object.entries(products)) {
       if (item[0] === 'default') {
         for (const entry of Object.entries(item[1])) {
-          const [title, url, price] = await getItemInfo(entry);
+          const result = await getItemInfo(entry);
+          if (!result) {
+            console.warn(`Skipping ${entry[0]} — scrape failed`);
+            continue;
+          }
+          const [title, url, price] = result;
           const newName = entry[0];
           const today = new Date().toISOString();
-          const now = new Date().toUTCString();
           const latest = today.slice(0, 10);
           const newest = DATA[newName]?.history[0]?.date?.slice(0, 10);
           const prevHistory = DATA[newName]?.history || [];
@@ -55,11 +58,11 @@ const scraper = async (products) => {
               title,
               url,
               history: [
-                ...prevHistory,
                 {
                   date: latest,
                   price: price,
                 },
+                ...prevHistory,
               ],
             };
 
