@@ -2,7 +2,7 @@
 const REPOS = [
   // {name: "", nickname: "", demoURL: "", description: "",},
   {
-    name: "java-ts-students-orders",
+    name: "java_ts_students_orders-challenge",
     nickname: "Students / Orders",
     // demoURL: "",
     description:
@@ -11,7 +11,7 @@ const REPOS = [
 
 
   {
-    name: "phones-flags",
+    name: "phones_flags_api-challenge",
     nickname: "Phones / Flags",
     // demoURL: "",
     description: "Instead of storing flag images directly in the codebase, the application retrieves them dynamically from an external API. This keeps the project lightweight, avoids shipping large static assets, and allows flags to stay accurate and up to date without additional maintenance. The result is a faster-loading, more scalable solution that emphasizes efficient data usage and thoughtful performance trade-offs.",
