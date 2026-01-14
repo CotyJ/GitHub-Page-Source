@@ -1,1 +1,0 @@
-import{j as s}from"./index-DupIHi6S.js";const e=()=>s.jsx("div",{children:s.jsxs("p",{children:["Oops! Just a link to the ",s.jsx("a",{href:"https://github.com/CotyJ/phones_flags_api-challenge",children:"GitHub"})," for now!"]})});export{e as default};
