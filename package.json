@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "scrape": "node src/scripts/scrape.cjs",
+    "deduplicate": "node src/scripts/deduplicate.cjs",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
