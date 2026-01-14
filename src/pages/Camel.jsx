@@ -14,6 +14,7 @@ const Camel = ({ theme, setTheme }) => {
 
   return (
     <div className="text-wrap">
+      <h1>Camel</h1>
       <p>Here I keep track of the price trends for a few items.</p>
       <p className="text-wrap">
         Some I just want to buy at some point, others are just to see stable
