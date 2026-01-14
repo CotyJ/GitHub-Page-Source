@@ -1,7 +1,7 @@
 import WebMContainer from './WebMContainer';
 
 const ChallengesPage = ({repo}) => {
-  const {name, nickname, ghURL, demoURL, description} = repo;
+  const {name, nickname, demoURL, description} = repo;
   return (
     <div>
       <h1><a href={`https://github.com/CotyJ/${nickname}`}>{nickname}</a></h1>
