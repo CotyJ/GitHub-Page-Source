@@ -105,9 +105,44 @@ li {
 }
 
 p a {
-  color: black;
+  color: #222;
+  text-decoration: none;
+}
+
+h1 a {
+  color: #222;
+  text-decoration: none;
 }
 
 [data-theme="dark"] p a {
   color: white;
+}
+
+[data-theme="dark"] h1 a {
+  color: white;
+}
+
+p a:hover {
+  color: #4d4d4d;
+  text-decoration: underline;
+}
+
+h1 a:hover {
+  color: #4d4d4d;
+  text-decoration: underline;
+}
+
+[data-theme="dark"] p a:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+[data-theme="dark"] h1 a:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+video {
+  border-radius: 6px;
+  max-width: 480px;
 }
