@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import REPOS from '../config/repos';
 
 const Navbar = ({theme, setTheme}) => {
 
@@ -44,9 +44,9 @@ const Navbar = ({theme, setTheme}) => {
                 Challenges
               </a>
               <ul className="dropdown-menu">
-                <li><NavLink id="phonesFlags" className="dropdown-item" to="/challenges/phones-flags">Phones and Flags</NavLink></li>
-                <li><NavLink id="studentsApi" className="dropdown-item" to="/challenges/students">Students API</NavLink></li>
-                {/* <li><a className="dropdown-item" href="#">???</a></li> */}
+                {REPOS.map((repo) =>
+                  <li key={repo.name}><NavLink id={repo.name} className="dropdown-item" to={`/challenges/${repo.name}`}>{repo.nickname}</NavLink></li>
+                )}
               </ul>
             </li>
 
