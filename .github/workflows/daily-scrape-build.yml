@@ -1,8 +1,9 @@
-name: Scrape and deploy
-run-name: "${{ github.actor }}'s daily build"
+name: Deploy on push
+run-name: "${{ github.actor }}.io build"
 on:
-  schedule:
-    - cron: '0 5 * * *'
+  push:
+      branches:
+        - main
   workflow_dispatch:
 
 jobs:
@@ -19,7 +20,6 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       - run: npm ci
-      - run: node src/scripts/scrape.cjs
       - run: npm run build
 
       - name: Deploy to GitHub Pages
