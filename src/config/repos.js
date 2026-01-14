@@ -16,7 +16,7 @@ const REPOS = [
     nickname: "Phones / Flags",
     ghURL: "https://github.com/CotyJ/phones_flags_api-challenge",
     // demoURL: "",
-    description: "A frontend project that lets users select their country and enter a phone number with automatic formatting. Each country’s flag is loaded dynamically via an API, keeping the code lightweight and fast. The project demonstrates interactive UI design, dynamic data handling, and attention to user experience.",
+    description: "Instead of storing flag images directly in the codebase, the application retrieves them dynamically from an external API. This keeps the project lightweight, avoids shipping large static assets, and allows flags to stay accurate and up to date without additional maintenance. The result is a faster-loading, more scalable solution that emphasizes efficient data usage and thoughtful performance trade-offs.",
   },
 
 
