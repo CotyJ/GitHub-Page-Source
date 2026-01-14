@@ -1,13 +1,22 @@
-const WebMContainer = ({webmSource}) => {
+const WebMContainer = ({ name }) => {
+  const webmPath = `/images/${name}.webm`;
+
+  console.log(webmPath);
+
   return (
-    <video
-      src={webmSource}
-      autoPlay
-      loop
-      muted
-      playsInline
-      style={{ width: '300px', height: 'auto' }}
-    />
+    <>
+      {name.length > 0 && (
+        <video
+          src={webmPath}
+          className=""
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{ width: '100%', height: 'auto' }}
+        />
+      )}
+    </>
   );
 };
 
