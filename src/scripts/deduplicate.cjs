@@ -19,8 +19,8 @@ for (const [, {history}] of Object.entries(DATA)) {
   deduped.sort((a,b) => Date.parse(a.date) - Date.parse(b.date));
   history.length = 0;
   history.push(...deduped);
-  console.log("Check Data!!!"); // LOG
-  console.log(deduped); // LOG
+  console.log("Check Data!!!");
+  console.log(deduped);
 }
 
 
