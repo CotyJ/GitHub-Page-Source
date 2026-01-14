@@ -1,8 +1,6 @@
 const WebMContainer = ({ name }) => {
   const webmPath = `/images/${name}.webm`;
 
-  console.log(webmPath);
-
   return (
     <>
       {name.length > 0 && (
