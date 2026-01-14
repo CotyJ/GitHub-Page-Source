@@ -1,5 +1,5 @@
-// Project info // NOTE: Name should match name in /assets/images
-const PROJECTS = [
+// Repo info // NOTE: Name should match name in /assets/images
+const REPOS = [
   // {name: "", nickname: "", ghURL: "", demoURL: "", description: "",},
   {
     name: "java-ts-students-orders",
@@ -28,4 +28,4 @@ const PROJECTS = [
 
 ]
 
-export default PROJECTS;
+export default REPOS;
