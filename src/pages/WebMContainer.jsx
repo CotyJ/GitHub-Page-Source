@@ -1,5 +1,5 @@
 const WebMContainer = ({ name }) => {
-  const webmPath = `public/images/${name}.webm`;
+  const webmPath = `/images/${name}.webm`;
 
   return (
     <>
