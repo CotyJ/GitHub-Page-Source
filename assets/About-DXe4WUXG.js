@@ -1,0 +1,1 @@
+import{j as o}from"./index-atFolfTE.js";const e=()=>o.jsxs("div",{children:[o.jsx("p",{children:"Wow! You actually want to know about me?! I'm touched!"}),o.jsx("p",{children:"Unfortunately, right now I have only worked on the professional stuff :D"})]});export{e as default};
